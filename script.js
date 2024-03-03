@@ -12,6 +12,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
         let json = await results.json();
 
         if (json.cod === 200) {
+            clearInfo();
             showInfo({
                 name: json.name,
                 country: json.sys.country,
@@ -26,8 +27,12 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
             document.querySelector('.descricao').innerHTML = `${json.weather[0].description}`;
             document.querySelector('.imagem').src = `https://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
         } else {
+            clearInfo();
             document.querySelector('.aviso').innerHTML = 'Ocorreu um erro, tente novamente mais tarde';
         }
+    } else {
+        clearInfo();
+        document.querySelector('.aviso').innerHTML = 'Por favor, insira o nome da cidade.';
     }
 });
 
@@ -43,6 +48,11 @@ function showInfo(json) {
     document.querySelector(".temp img").setAttribute("src", `http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
 
     document.querySelector('.ventoPonto').style.transform = `rotate(${json.windAngle - 90}deg)`;
+}
+
+function clearInfo() {
+    showWarning('');
+    document.querySelector('.resultado').style.display = 'none';
 }
 
 function showWarning(msg) {
