@@ -19,7 +19,10 @@
 <section id="dashboard-screen">
   <h2>Tela Inicial</h2>
   
-  <img src="https://github.com/edvaldovitor250/relogio-analogico/assets/116117189/1bb3411f-f1f7-4b70-9cfa-66778823f783" alt="Captura de tela da aplicação exibindo um relógio analógico no navegador Google Chrome">
+
+https://github.com/edvaldovitor250/weather-finder/assets/116117189/591ce7e9-e00a-447b-9034-707e239aea6b
+
+
   
 </section>
 
@@ -39,9 +42,6 @@
 
   
   <p>A aplicação oferece as seguintes funcionalidades:</p>
-  
-  <img src="https://github.com/edvaldovitor250/relogio-analogico/assets/116117189/1bb3411f-f1f7-4b70-9cfa-66778823f783" alt="Captura de tela da aplicação exibindo um relógio analógico no navegador Google Chrome">
-  
   <ul>
     <li><strong>Exibição de Temperatura e Velocidade do Vento:</strong> Apresenta ao usuário a temperatura atual e a velocidade do vento da localidade pesquisada.</li>
     <li><strong>Indicação do Estado do Tempo:</strong> Utiliza uma pequena imagem para representar o estado do sol e a qualidade do vento no local.</li>
