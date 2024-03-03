@@ -42,8 +42,8 @@ function showInfo(json) {
     document.querySelector('.resultado').style.display = 'block';
 
     document.querySelector('.titulo').innerHTML = `${json.name}, ${json.country}`;
-    document.querySelector('.tempInfo').innerHTML = `${json.temp} <sup>ºC</sup>`; // Corrigido 'json.humidade' para 'json.temp'
-    document.querySelector('.ventoInfo').innerHTML = `${json.windSpeed} <span>km/h</span>`; // Adicionado ponto e vírgula
+    document.querySelector('.tempInfo').innerHTML = `${json.temp} <sup>ºC</sup>`;
+    document.querySelector('.ventoInfo').innerHTML = `${json.windSpeed} <span>km/h</span>`;
 
     document.querySelector(".temp img").setAttribute("src", `http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
 
