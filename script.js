@@ -16,16 +16,11 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
             showInfo({
                 name: json.name,
                 country: json.sys.country,
-                temp: json.main.temp,
+                temp: convertKelvinToCelsius(json.main.temp), 
                 tempIcon: json.weather[0].icon,
                 windSpeed: json.wind.speed,
                 windAngle: json.wind.deg
             });
-
-            document.querySelector('.temperatura').innerHTML = `${Math.round(json.main.temp)}°C`;
-            document.querySelector('.humidade').innerHTML = `${Math.round(json.main.humidity)}%`;
-            document.querySelector('.descricao').innerHTML = `${json.weather[0].description}`;
-            document.querySelector('.imagem').src = `https://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
         } else {
             clearInfo();
             document.querySelector('.aviso').innerHTML = 'Ocorreu um erro, tente novamente mais tarde';
@@ -42,7 +37,7 @@ function showInfo(json) {
     document.querySelector('.resultado').style.display = 'block';
 
     document.querySelector('.titulo').innerHTML = `${json.name}, ${json.country}`;
-    document.querySelector('.tempInfo').innerHTML = `${json.temp} <sup>ºC</sup>`;
+    document.querySelector('.tempInfo').innerHTML = `${json.temp.toFixed(2)} <sup>ºC</sup>`; // Arredondar para duas casas decimais
     document.querySelector('.ventoInfo').innerHTML = `${json.windSpeed} <span>km/h</span>`;
 
     document.querySelector(".temp img").setAttribute("src", `http://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
@@ -57,4 +52,8 @@ function clearInfo() {
 
 function showWarning(msg) {
     document.querySelector('.aviso').innerHTML = msg;
+}
+
+function convertKelvinToCelsius(tempKelvin) {
+    return tempKelvin - 273.15; 
 }
