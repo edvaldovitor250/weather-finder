@@ -20,7 +20,10 @@
   <h2>Tela Inicial</h2>
   
 
-https://github.com/edvaldovitor250/weather-finder/assets/116117189/591ce7e9-e00a-447b-9034-707e239aea6b
+
+
+https://github.com/edvaldovitor250/weather-finder/assets/116117189/6b74ac89-b64b-4941-a27e-802abc8e529b
+
 
 
   
